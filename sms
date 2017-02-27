@@ -1,0 +1,2 @@
+#! /usr/bin/env zsh
+curl --data "message=$2" "https://sms.varal7.fr/api.php?token=db6e2fd80cc11b01a6689a04e13cc468&number=$1"

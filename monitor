@@ -1,0 +1,8 @@
+#! /usr/bin/env zsh
+
+if [ $# -ne 1 ]
+then
+    echo "Usage: $0 <command to execute>"
+    exit 1;
+fi;
+eval "($1 && notify \"Done executing: $1\" > /dev/null 2>&1 &) || notify \"Error executing: $1\" > /dev/null 2>&1 &"
